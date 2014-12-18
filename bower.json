@@ -1,0 +1,10 @@
+{
+  "name": "flickr-webapp",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "backbone": "~1.1.2",
+    "requirejs": "~2.1.5",
+    "moment": "~2.8.3"
+  }
+}
