@@ -1,0 +1,7 @@
+<button id="flickr-filter" type="submit" class="btn btn-primary pull-right" style="margin:18px 0;">Seach on Filckr</button>
+<div class="col-xs-4 pull-left-sm" style="float:right;">
+	<div class="inner-addon right-addon" style="margin:18px 0;">
+	<i class="glyphicon glyphicon-search"></i>
+	<input id="filter-tag-value" type="search" class="form-control" placeholder="Search" />
+	</div>
+</div>

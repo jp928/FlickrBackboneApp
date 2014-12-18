@@ -1,0 +1,38 @@
+{{? it.tags }}
+
+<h5 class="search-tag">Tags: {{= it.tags }}</h5>
+
+{{? it.models.length > 0 }}
+<fieldset class="sort-continer">
+	<label class="sort-label">Sort results by date: </label>
+	<div id="date-sort" class="btn-group" data-toggle="buttons">
+		<label class="btn btn-primary"><input type="radio" name="ascend" id="ascend"> Ascend</label>
+		<label class="btn btn-primary"><input type="radio" name="descend" id="descend"> Descend</label>
+	</div>
+</fieldset>
+{{?}}
+{{?}}
+ 
+{{? it.models.length > 0 }}
+	<section id="cd-timeline" class="cd-container">
+	{{~ it.models :value :index }}
+		<div class="cd-timeline-block">
+		        <div class="cd-timeline-img cd-picture bounce-in">
+		            <img src="{{=value.attributes.media.m}}" class="media-object img-rounded">
+		        </div>
+		 
+		        <div class="cd-timeline-content bounce-in">
+		            	<h3 class="timeline-title">{{=value.attributes.title}}</h3>
+	            		<div class="img-desc" class="hover-effect" index="{{=index}}">{{=value.attributes.description}}</div>
+            			<a href="{{=value.attributes.link}}" class="cd-read-more" target="_blank">View on Flickr</a>
+	            		<span class="cd-date"><time datetime="{{=value.attributes.published}}">{{=value.attributes.showtime}}</time></span>
+		        </div>
+    		</div>
+	{{~}}
+	</section>
+{{?}}
+
+{{? it.models.length == 0 }}
+<h2>No result found.</h2>
+<div class="alert"></div>
+{{?}}
